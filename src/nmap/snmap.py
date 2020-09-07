@@ -2,7 +2,7 @@
 
 import nmap
 
-scanner = nmap.PortScanner()
+nm =  nmap.PortScanner()
 
 print("           Hack4Squad - Nmap Scan                      ")
 print("<----------------------------------------------------->")
