@@ -1,4 +1,8 @@
 # :skull: Hack4Squad
+[![Bash4.2-shield]](http://tldp.org/LDP/abs/html/bashver4.html#AEN21220) [![License-shield]](https://raw.githubusercontent.com/KMx404/Hack4Squad/master/LICENSE.md) 
+
+
+
 A bash hacking utility driven by python script 
 <hr> <br />
 Hack4Squad is a collection for hacking tool (Bash and python based) :computer: <br />
