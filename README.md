@@ -1,4 +1,4 @@
-# :skull: Hack4Squad [![Bash4.2-shield]](http://tldp.org/LDP/abs/html/bashver4.html#AEN21220) [![License-shield]](https://raw.githubusercontent.com/KMx404/Hack4Squad/LICENSE.md)
+# :skull: Hack4Squad [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/nmap/nmap.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/nmap/nmap/context:python)
 
 
 
