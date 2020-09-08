@@ -18,7 +18,7 @@ nmap_scan2(){
 	read -p 'Your address:$ ' scanaddress
 	nmap -sS $scanaddress 
 }
-namp_scan3(){
+nmap_scan3(){
 	echo '################# Hack4Squad - NmapBasic OS Scan #################' 
 	nmap -A -O 192.168.0.1
 }
@@ -28,24 +28,54 @@ nmap_scann(){
 	echo '1 - SCAN A WEBSITE' 
 	echo '2 - SCAN AN ADDRESS' 
 	echo '3 - SCAN AN OS'
-	echo '3 - EXIT'
+	echo '4 - EXIT'
 	echo ' '
 	read -p 'Pick$: ' po 
 	if [ $po = '1' ]; then
 	       nmap_scan1
         elif [ $po = '2' ]; then
 	       nmap_scan2 
+	elif [ $po = '3' ]; then
+		nmap_scan3 
+	elif [ $po = '4']; then
+		exit 
 	fi 
+}
+scant3r_normal_scan(){
+	echo ' ' 
+	echo '################# Hack4Squad - Webscans > SCANT3R > NORMAL SCAN' 
+	echo ' ' 
+	cd scant3r
+	pwd
+	#read -p 'Enter the target link: ' link
+	$ echo "http://testphp.vulnweb.com/search.php?test=query&searchFor=1&goButton=go" | python3 scant3r.py -m headers
+} 
+scant3r(){
+	echo ' '
+	echo '################# Hack4Squad - Webscans > SCANT3R #################'
+   	echo '1 - NORMAL SCAN'
+	echo '2 - SCAN WITH ADDED MODULE'
+	echo '3 - WITH RANDOM USER-AGENTS'
+	echo ' ' 
+	read -p 'pick:$ ' poo
+	if [ $poo = '1' ]; then
+		scant3r_normal_scan
+	elif [ $poo = '2' ]; then
+		scant3r_added_module
+	elif [ $poo = '3' ]; then
+		scant3r_random_user_agents
+	fi 	
 }
 web_scans(){
 	echo '' 
-	echo '################# Hack4Sqad - Webscans #################'
+	echo '################# Hack4Squad - Webscans #################'
 	echo '1 - SCANT3R ' 
 	echo '2 - RETUR ' 
 	echo ' '
 	read -p 'pick$: ' poo 
 	if [ $poo = '1' ]; then
-		python3 scant3r/scant3r.py
+		clear
+		scant3r
 	fi 
 }
 clear
