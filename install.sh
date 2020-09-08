@@ -10,7 +10,9 @@ echo ""
 echo -e "\e[33m [Scant3r]"
 echo ''
 git clone https://github.com/knassar702/scant3r.git
+cd scant3r
 pip3 install -r requirements.txt 
+cd .. 
 echo '' 
 echo -e "\e[33m [Lynis]"
 git clone https://github.com/CISOfy/lynis.git

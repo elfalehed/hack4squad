@@ -11,18 +11,19 @@ nmap_scan1(){
 	echo ' '
 	echo '#################  Hack4Squad - NmapBasic Website Scan  #################'
 	read -p 'Your target:$ ' scansite
-	nmap -A -T4 $scansite
+	nmap -sS -O $scansite
 }
 nmap_scan2(){
-	echo ' ' 
 	echo '################# Hack4Squad - NmapBasic Address Scan  #################' 
-	read -p 'Your address:$ ' scanaddr
-} 
+	read -p 'Your address:$ ' scanaddress
+	nmap -sS $scanaddress 
+}
 nmap_scann(){
-        echo ' '	
+    echo ' '	
 	echo '#################  Hack4Squad - NmapScans  #################'
 	echo '1 - SCAN A WEBSITE' 
 	echo '2 - SCAN AN ADDRESS' 
+	echo '3 - SCAN AN OS'
 	echo '3 - EXIT'
 	echo ' '
 	read -p 'Pick$: ' po 
@@ -62,11 +63,14 @@ echo   '       4 - \e[1;34m   WIRELESS NETWORKS AUDITING   \e[0m                
 echo   '       5 - \e[1;34m   OSINT TOOLS 	\e[0m			      '
 echo   '\e[1;31m------------------------------------------------------------- ' 
 echo '\e[1;36m H3LL0,' $USER 
-echo ''   
-sleep 1
-echo '' 
+echo ' '  
 echo // Greetingz. This script is a gift for my fellow Hackers out there. Happy Hacking! 
-echo ''
+echo ' '
+if [ $(id -u) != 0 ]; then
+     echo "> You're not root. You need to restart the script with Sudo privilages"
+     # elevate script privileges
+fi
+echo ' '
 read -p 'Pick$:  ' choice 
 if [ $choice = '1' ]; then 
 clear
@@ -95,5 +99,5 @@ elif [ $choice = '3' ]; then
 elif [ $choice = '4' ]; then 
        wire_audit
 elif [ $choice = '5' ]; then
-       osint_tools		
-fi 
+       osint_tools
+fi
