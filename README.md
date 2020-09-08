@@ -22,7 +22,7 @@ Hack4Squad is a collection for hacking tool (Bash and python based) :computer: <
 2. ./install.sh 
 
 ```  
- <b><i>The collection:/i></b>
+ <b><i>The collection:</i></b>
 
 ```Shell
  Hack4Squad (V0.1): 
