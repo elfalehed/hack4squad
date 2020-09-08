@@ -1,34 +1,47 @@
 #!/bin/sh
 
+# Name: Hack4Squad 
+# Clone the repository and add your features in the develop branch 
 # Author: Mohamed E.Faleh // @KMx404 >> All contributers are mentioned in the README file 
 # Version: V0.1 
 # BashV: V4.1+ 
-# Happy Hacking // Scanning 
-	
+# Happy Hacking 
+
 nmap_scan1(){
 	echo ' '
-	echo '#################  Hack4Squad - NmapBasic Scan  #################'
-	read -p 'Your address/target:$ ' scanaddr
-	nmap -sT -A -iL $scanaddr 
+	echo '#################  Hack4Squad - NmapBasic Website Scan  #################'
+	read -p 'Your target:$ ' scansite
+	nmap -A -T4 $scansite
 }
+nmap_scan2(){
+	echo ' ' 
+	echo '################# Hack4Squad - NmapBasic Address Scan  #################' 
+	read -p 'Your address:$ ' scanaddr
+} 
 nmap_scann(){
-        echo''	
+        echo ' '	
 	echo '#################  Hack4Squad - NmapScans  #################'
-	echo '1 - SIMPLE SCAN' 
-	echo '2 - EXIT'
+	echo '1 - SCAN A WEBSITE' 
+	echo '2 - SCAN AN ADDRESS' 
+	echo '3 - EXIT'
 	echo ' '
 	read -p 'Pick$: ' po 
 	if [ $po = '1' ]; then
 	       nmap_scan1
-        elif [ $po = '2']; then
-	       exit 
+        elif [ $po = '2' ]; then
+	       nmap_scan2 
 	fi 
 }
 web_scans(){
-	clear
-	echo { Hack4Squad - Websecurity scanners }
-	echo 1 - Scant3r
-	echo 2 - Return
+	echo '' 
+	echo '################# Hack4Sqad - Webscans #################'
+	echo '1 - SCANT3R ' 
+	echo '2 - RETUR ' 
+	echo ' '
+	read -p 'pick$: ' poo 
+	if [ $poo = '1' ]; then
+		python3 scant3r/scant3r.py
+	fi 
 }
 clear
 echo   '\e[1;31m-------------------------------------------------------------'
@@ -67,11 +80,20 @@ echo	'                             /_/                                         '
 echo	'\e[1;31m-------------------------------------------------------------- ' 
 nmap_scann
 elif [ $choice = '2' ]; then
-       web_scans
+clear
+echo '\e[1;31m-------------------------------------------------------- '  
+echo '           __     __                                       '
+echo '	| |     / /__  / /_     ______________ _____  _____      '
+echo '	| | /| / / _ \/ __ \   / ___/ ___/ __ `/ __ \/ ___/      '
+echo '	| |/ |/ /  __/ /_/ /  (__  ) /__/ /_/ / / / (__  )       '
+echo '	|__/|__/\___/_.___/  /____/\___/\__,_/_/ /_/____/        ' 
+echo '								'
+echo '\e[1;31m------------------------------------------------------ '                                                  
+web_scans
 elif [ $choice = '3' ]; then
        os_scans
 elif [ $choice = '4' ]; then 
        wire_audit
 elif [ $choice = '5' ]; then
        osint_tools		
-fi
+fi 
