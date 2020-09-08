@@ -6,12 +6,14 @@ A bash hacking utility driven by python script
 <hr> <br />
 Hack4Squad is a collection for hacking tools (Bash and python based) :computer: <br />
 <br />
+![Banner](Banner.png) 
 
 ## Menu 
 * Nmap Scan
 * Web security scans
 * Wireless auditing
 * OSINT 
+
 <br />
 
 ## Nmap scan:
@@ -22,6 +24,8 @@ Hack4Squad is a collection for hacking tools (Bash and python based) :computer: 
 <br />
 
 ## Web security scans:
+* WAScan
+* Dirsearch
 * Scant3r 
 
 <br />
@@ -32,7 +36,7 @@ Hack4Squad is a collection for hacking tools (Bash and python based) :computer: 
 * Airmon-ng 
 * Wifite - wifi cracker 
 
-wbr />
+<br />
 
 ## OSINT: 
 * OSINT framework

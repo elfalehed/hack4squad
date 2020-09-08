@@ -20,8 +20,8 @@ nmap_scan2(){
 }
 namp_scan3(){
 	echo '################# Hack4Squad - NmapBasic OS Scan #################' 
-	nmap -A -O 
-} Â 
+	nmap -A -O 192.168.0.1
+}
 nmap_scann(){
     echo ' '	
 	echo '#################  Hack4Squad - NmapScans  #################'
@@ -69,6 +69,7 @@ echo   '\e[1;31m------------------------------------------------------------- 'Â
 echo '\e[1;36m H3LL0,' $USER 
 echo ' '  
 echo '// Greetingz. This script is a gift for my fellow Hackers out there. Happy Hacking! '
+echo ' '
 echo '[!] Use this script only on your Network '
 echo ' '
 if [ $(id -u) != 0 ]; then
