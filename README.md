@@ -23,12 +23,14 @@ Hack4Squad is a collection for hacking tools (Bash and python based) :computer: 
 * Networks 
 
 <br />
+
 ## Web security scans:
 * WAScan
 * Dirsearch
 * Scant3r 
 
 <br />
+
 ## Wireless auditing:
 * Airgeddon 
 * Aircrack-ng 
@@ -36,6 +38,7 @@ Hack4Squad is a collection for hacking tools (Bash and python based) :computer: 
 * Wifite - wifi cracker 
 
 <br />
+
 ## OSINT: 
 * OSINT framework
 * Sherlock
