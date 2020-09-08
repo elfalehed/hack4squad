@@ -7,11 +7,14 @@ A bash hacking utility driven by python script
 Hack4Squad is a collection for hacking tool (Bash and python based) :computer: <br />
 
 <br />
+
 ## :fire: How to initiate: 
+
 ```Shell 
 1. chmod +x Hack4Squad.sh 
 2. ./Hack4Squad.sh
 ```
+
 <b><i>Make sure you install all of the needed tool</i><b>
 
 ```Shell
