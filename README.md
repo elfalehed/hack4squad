@@ -4,7 +4,7 @@
 
 A bash hacking utility driven by python script 
 <hr> <br />
-Hack4Squad is a collection for hacking tool (Bash and python based) :computer: <br />
+Hack4Squad is a collection for hacking tools (Bash and python based) :computer: <br />
 
 <br />
 
@@ -15,7 +15,7 @@ Hack4Squad is a collection for hacking tool (Bash and python based) :computer: <
 2. ./Hack4Squad.sh
 ```
 
-<b><i>Make sure you install all of the needed tool</i><b>
+<b><i>Make sure you install all of the needed tools</i><b>
 
 ```Shell
 1. chmod +x install.sh
@@ -29,7 +29,7 @@ Hack4Squad is a collection for hacking tool (Bash and python based) :computer: <
  |_ nmap scan
  | |__ port scanners
  |
- |_ web security scanenrs 
+ |_ web security scanners 
  | |__ scant3r
  | |__ ...
  |
