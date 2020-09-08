@@ -6,7 +6,7 @@ A bash hacking utility driven by python script
 <hr> <br />
 Hack4Squad is a collection for hacking tools (Bash and python based) :computer: <br />
 <br />
-<img src="Banner.png" style="float:left; margin-right: 10px;" />
+<img src="banner.png" style="float:left; margin-right: 10px;" />
 
 
 ## Menu 
