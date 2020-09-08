@@ -5,48 +5,39 @@
 A bash hacking utility driven by python script 
 <hr> <br />
 Hack4Squad is a collection for hacking tools (Bash and python based) :computer: <br />
+<br />
+
+## Menu 
+* Nmap Scan
+* Web security scans
+* Wireless auditing
+* OSINT 
+<br />
+
+## Nmap scan:
+* Address/Host
+* Websites 
+* Networks 
 
 <br />
 
-## :fire: How to initiate: 
+## Web security scans:
+* Scant3r 
 
-```Shell 
-1. chmod +x Hack4Squad.sh 
-2. ./Hack4Squad.sh
-```
+<br />
 
-<b><i>Make sure you install all of the needed tools</i><b>
+## Wireless auditing:
+* Airgeddon 
+* Aircrack-ng 
+* Airmon-ng 
+* Wifite - wifi cracker 
 
-```Shell
-1. chmod +x install.sh
-2. ./install.sh 
+wbr />
 
-```  
- <b><i>The collection:</i></b>
-
-```Shell
- Hack4Squad (V0.1): 
- |_ nmap scan
- | |__ port scanners
- |
- |_ web security scanners 
- | |__ scant3r
- | |__ ...
- |
- |_ os scanners 
- | |__ lynis 
- | |__ ....
- |
- |_ wireless networks auditing
- | |__ airgeddon
- |     |__ ....
- |
- |__ OSINT tools
- |  |__ sherlock
- |  |__ ... 
- 
- ```
-
+## OSINT: 
+* OSINT framework
+* Sherlock
+* Photon 
 
 
 ## Status: 

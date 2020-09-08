@@ -18,6 +18,10 @@ nmap_scan2(){
 	read -p 'Your address:$ ' scanaddress
 	nmap -sS $scanaddress 
 }
+namp_scan3(){
+	echo '################# Hack4Squad - NmapBasic OS Scan #################' 
+	nmap -A -O 
+}  
 nmap_scann(){
     echo ' '	
 	echo '#################  Hack4Squad - NmapScans  #################'
@@ -64,7 +68,8 @@ echo   '       5 - \e[1;34m   OSINT TOOLS 	\e[0m			      '
 echo   '\e[1;31m------------------------------------------------------------- ' 
 echo '\e[1;36m H3LL0,' $USER 
 echo ' '  
-echo // Greetingz. This script is a gift for my fellow Hackers out there. Happy Hacking! 
+echo '// Greetingz. This script is a gift for my fellow Hackers out there. Happy Hacking! '
+echo '[!] Use this script only on your Network '
 echo ' '
 if [ $(id -u) != 0 ]; then
      echo "> You're not root. You need to restart the script with Sudo privilages"
