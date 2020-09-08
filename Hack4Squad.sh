@@ -4,7 +4,7 @@
 # Version: V0.1 
 # BashV: V4.1+ 
 # Happy Hacking // Scanning 
- 
+	
 nmap_scan1(){
 	echo {  Hack4Squad - NmapBasic Scan  } 
 	read -p 'Your address/target:$ ' scanaddr
@@ -14,15 +14,20 @@ nmap_scann(){
 	clear 
 	echo '{  Hack4Squad - NmapScans  }'
 	echo '1 - SIMPLE SCAN' 
-	echo '2- Return'
+	echo '2 - Return'
 	echo ' '
 	read -p 'Pick$: ' po 
 	if [ $po = '1' ]; then
 	       nmap_scan1
         elif [ $po = '2']; then
- 	       clear 
-	       python3 Hack4Squad.py       
+	       eval 'exit' 
 	fi 
+}
+web_scans(){
+	clear
+	echo { Hack4Squad - Websecurity scanners }
+	echo 1 - Scant3r
+	echo 2 - Return
 }
 clear
 echo   '\e[1;31m-------------------------------------------------------------'
@@ -50,7 +55,10 @@ echo // Greetingz. This script is a gift for my fellow Hackers out there. Happy 
 echo ''
 read -p 'Pick$:  ' choice 
 if [ $choice = '1' ]; then 
-       nmap_scann
+       
+
+
+
 elif [ $choice = '2' ]; then
        web_scans
 elif [ $choice = '3' ]; then
