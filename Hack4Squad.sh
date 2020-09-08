@@ -6,21 +6,22 @@
 # Happy Hacking // Scanning 
 	
 nmap_scan1(){
-	echo {  Hack4Squad - NmapBasic Scan  } 
+	echo ' '
+	echo '#################  Hack4Squad - NmapBasic Scan  #################'
 	read -p 'Your address/target:$ ' scanaddr
 	nmap -sT -A -iL $scanaddr 
 }
 nmap_scann(){
-	clear 
-	echo '{  Hack4Squad - NmapScans  }'
+        echo''	
+	echo '#################  Hack4Squad - NmapScans  #################'
 	echo '1 - SIMPLE SCAN' 
-	echo '2 - Return'
+	echo '2 - EXIT'
 	echo ' '
 	read -p 'Pick$: ' po 
 	if [ $po = '1' ]; then
 	       nmap_scan1
         elif [ $po = '2']; then
-	       eval 'exit' 
+	       exit 
 	fi 
 }
 web_scans(){
@@ -55,10 +56,16 @@ echo // Greetingz. This script is a gift for my fellow Hackers out there. Happy 
 echo ''
 read -p 'Pick$:  ' choice 
 if [ $choice = '1' ]; then 
-       
-
-
-
+clear
+echo	'\e[1;31m-------------------------------------------------------------- '
+echo	'            _   __                                                       '
+echo	'  	   / | / /___ ___  ____ _____     ______________ _____          '
+echo	'	  /  |/ / __ `__ \/ __ `/ __ \   / ___/ ___/ __ `/ __ \         '
+echo	'	 / /|  / / / / / / /_/ / /_/ /  (__  ) /__/ /_/ / / / /         '
+echo	'	/_/ |_/_/ /_/ /_/\__,_/ .___/  /____/\___/\__,_/_/ /_/          '
+echo	'                             /_/                                         '
+echo	'\e[1;31m-------------------------------------------------------------- ' 
+nmap_scann
 elif [ $choice = '2' ]; then
        web_scans
 elif [ $choice = '3' ]; then
