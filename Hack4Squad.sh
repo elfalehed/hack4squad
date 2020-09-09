@@ -10,6 +10,10 @@
 nmap_scan1(){
 	echo ' '
 	echo '#################  Hack4Squad - NmapBasic Website Scan  #################'
+	echo ' '
+	echo 'Example: '
+	echo 'You target:$ scanme.nmap.org' 
+	echo ' '
 	read -p 'Your target:$ ' scansite
 	nmap -sS -O $scansite
 }
@@ -45,10 +49,7 @@ scant3r_normal_scan(){
 	echo ' ' 
 	echo '################# Hack4Squad - Webscans > SCANT3R > NORMAL SCAN' 
 	echo ' ' 
-	cd scant3r
-	pwd
-	#read -p 'Enter the target link: ' link
-	$ echo "http://testphp.vulnweb.com/search.php?test=query&searchFor=1&goButton=go" | python3 scant3r.py -m headers
+	python3 SCANT3R_V2.py
 } 
 scant3r(){
 	echo ' '
@@ -96,18 +97,18 @@ echo   '       3 - \e[1;34m   OS SCANNERS   \e[0m                               
 echo   '       4 - \e[1;34m   WIRELESS NETWORKS AUDITING   \e[0m                                  '
 echo   '       5 - \e[1;34m   OSINT TOOLS 	\e[0m			      '
 echo   '\e[1;31m------------------------------------------------------------- ' 
-echo '\e[1;36m H3LL0,' $USER 
+echo '\e[1;36m [$] H3LL0,' $USER 
 echo ' '  
-echo '// Greetingz. This script is a gift for my fellow Hackers out there. Happy Hacking! '
+echo '	 [!] Greetingz. This script is a gift for my fellow Hackers out there. Happy Hacking! '
 echo ' '
-echo '[!] Use this script only on your Network '
+echo '         [~] Use this script only on your Network '
 echo ' '
 if [ $(id -u) != 0 ]; then
      echo "> You're not root. You need to restart the script with Sudo privilages"
      # elevate script privileges
 fi
 echo ' '
-read -p 'Pick$:  ' choice 
+read -p 'Pick$: ' choice 
 if [ $choice = '1' ]; then 
 clear
 echo	'\e[1;31m-------------------------------------------------------------- '
