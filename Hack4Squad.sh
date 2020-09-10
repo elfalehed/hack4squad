@@ -12,7 +12,7 @@ nmap_scan1(){
 	echo '#################  Hack4Squad - NmapBasic Website Scan  #################'
 	echo ' '
 	echo 'Example: '
-	echo 'You target:$ scanme.nmap.org' 
+	echo 'Your target:$ scanme.nmap.org' 
 	echo ' '
 	read -p 'Your target:$ ' scansite
 	nmap -sS -O $scansite
@@ -49,8 +49,9 @@ scant3r_normal_scan(){
 	echo ' ' 
 	echo '################# Hack4Squad - Webscans > SCANT3R > NORMAL SCAN' 
 	echo ' ' 
-	python3 SCANT3R_V2.py
-} 
+	python3 scant3r/scant3r.py 
+	#python3 SCANT3R_V2.py
+}  
 scant3r(){
 	echo ' '
 	echo '################# Hack4Squad - Webscans > SCANT3R #################'
@@ -95,7 +96,8 @@ echo   '       1 - \e[1;34m   NMAP SCAN           \e[0m                   '
 echo   '       2 - \e[1;34m   WEB SECURITY SCANNERS \e[0m                                                  '
 echo   '       3 - \e[1;34m   OS SCANNERS   \e[0m                                               '
 echo   '       4 - \e[1;34m   WIRELESS NETWORKS AUDITING   \e[0m                                  '
-echo   '       5 - \e[1;34m   OSINT TOOLS 	\e[0m			      '
+echo   '       5 - \e[1;34m   OSINT TOOLS 	\e[0m					'
+echo   '       6 - \e[1;34m   CONTACT THE CODER \e[0m									'
 echo   '\e[1;31m------------------------------------------------------------- ' 
 echo '\e[1;36m [$] H3LL0,' $USER 
 echo ' '  
@@ -137,4 +139,6 @@ elif [ $choice = '4' ]; then
        wire_audit
 elif [ $choice = '5' ]; then
        osint_tools
+elif [ $choice = '6' ]; then 
+	firefox "https://linktr.ee/KMx404"
 fi
