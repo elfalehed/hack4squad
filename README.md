@@ -74,5 +74,3 @@ Hack4Squad is a collection for hacking tools (Bash and python based) :computer: 
 
 <br />
 
-
-[Airgeddon] : https://github.com/KMx404/Hack4Squad/Airgeddon/README.md
