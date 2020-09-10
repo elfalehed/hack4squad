@@ -48,9 +48,8 @@ nmap_scann(){
 scant3r_normal_scan(){
 	echo ' ' 
 	echo '################# Hack4Squad - Webscans > SCANT3R > NORMAL SCAN' 
-	echo ' ' 
-	python3 scant3r/scant3r.py 
-	#python3 SCANT3R_V2.py
+	echo ' '  
+	python3 SCANT3R_V2.py
 }  
 scant3r(){
 	echo ' '
@@ -92,6 +91,18 @@ wire_audit(){
 		chmod +x airgeddon.sh
 		./airgeddon.sh
 	fi
+}
+os_scans(){
+	echo ' ' 
+	echo '################# Hack4Squad - OS scans'
+	echo '1 - Lynis'
+        echo ' '	
+	read -p 'pick:$ ' po
+	if [ $po = '1' ]; then
+		clear
+		cd lynis
+		./lynis audit system
+	fi 
 }
 clear
 echo   '\e[1;31m-------------------------------------------------------------'
@@ -147,12 +158,13 @@ echo '								'
 echo '\e[1;31m------------------------------------------------------ '                                                  
 web_scans
 elif [ $choice = '3' ]; then
+clear
 echo '\e[1;31m-------------------------------------------------------- '  
-echo'     ___  ____                             '
-echo '   / _ \/ ___|   ___  ___ __ _ _ __  ___  '
-echo '	| | | \___ \  / __|/ __/ _` |  _ \/ __| '
-echo '	| |_| |___) | \__ \ (_| (_| | | | \__ \ '
-echo '	 \___/|____/  |___/\___\__,_|_| |_|___/ '     
+echo ' 	   ___  ____                           			   '
+echo '  	 / _ \/ ___|   ___  ___ __ _ _ __  ___			  '
+echo '	| | | \___ \  / __|/ __/ _` |  _ \/ __|				 '
+echo '	| |_| |___) | \__ \ (_| (_| | | | \__ \ 			'
+echo '	 \___/|____/  |___/\___\__,_|_| |_|___/ 			'     
 echo ' '
 echo '\e[1;31m------------------------------------------------------ '                                                  
 os_scans
@@ -168,7 +180,7 @@ echo ' '
 echo '\e[1;31m---------------------------------------------------------------------------------- '  
 wire_audit
 elif [ $choice = '5' ]; then
-       osint_tools
+       osint_toolsض
 elif [ $choice = '6' ]; then 
 	firefox "https://linktr.ee/KMx404"
 fi
