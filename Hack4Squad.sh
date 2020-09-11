@@ -111,6 +111,7 @@ os_scans(){
 
 osint_tools ()
 {
+	clear
     echo ' '
     echo '#################  Hack4Squad - OSINT  #################'
     echo '1 - PHOTON'
@@ -121,25 +122,34 @@ osint_tools ()
     read -p 'pick:$ ' po
     if [ $po = '1' ]; then
         clear
-        photonSimpleScan
-        elif [$po ='2'] ; then
-        clear
-        photonAdvancedScan
+        photonMenu
     fi
 }
 
-## PHOTON MODULES 
+## PHOTON MODULES
 
 photonMenu ()
 {
-	echo ' '
+	clear
+    echo ' '
     echo '################# Hack4Squad - OSINT > PHOTON '
     echo '1 - NORMAL SCAN'
     echo '2 - ADVANCED SCAN'
     echo '3 - RETURN'
     echo ' '
     read -p 'pick:$ ' poo
-
+    if [ $po = '1' ]; then
+        clear
+        photonSimpleScan
+        elif [$po ='2'] ; then
+        clear
+        photonAdvancedScan
+        elif [ $poo = '3' ] ; then
+        clear
+        os_scans
+    fi
+    
+    
 }
 
 photonSimpleScan ()
@@ -157,9 +167,10 @@ photonAdvancedScan ()
     python photon.py -u $url --wayback --keys --dns -o output
     
 }
+
 #################################################################
 
-## DIRSEACH MODULES 
+## DIRSEACH MODULES
 dirsearchMenu ()
 {
     echo ' '
@@ -203,6 +214,7 @@ dirsearchAdvancedScan ()
 }
 
 ###################################################################
+
 wascanSimpleScan ()
 {
     echo -n "Enter Your URL: "
