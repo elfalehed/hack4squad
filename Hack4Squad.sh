@@ -80,14 +80,14 @@ web_scans(){
         clear
         scant3r
         elif [ $poo = '2' ]; then
+		clear
         dirsearchDefaultScan
-        clear
 		elif [ $poo = '3' ]; then
+		clear
         dirsearchAdvancedScan
-        clear
 		elif [ $poo = '4' ]; then
+		clear
         wascanSimpleScan
-        clear
     fi
 }
 wire_audit(){
@@ -130,7 +130,7 @@ osint_tools ()
         clear
         photonSimpleScan
         elif [$po ='2'] ; then
-        clearn
+        clear
         photonAdvancedScan
     fi
 }
