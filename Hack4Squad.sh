@@ -72,22 +72,15 @@ web_scans(){
     echo ''
     echo '################# Hack4Squad - Webscans #################'
     echo '1 - SCANT3R '
-    echo '2 - DIRSEARCH SIMPLE SCAN'
-    echo '3 - DIRSEARCH ADVANCED SCAN'
-    echo '4 - WASCAN'
+    echo '2 - DIRSEARCH'
+    echo '3 - WASCAN'
     read -p 'pick$: ' poo
     if [ $poo = '1' ]; then
         clear
         scant3r
         elif [ $poo = '2' ]; then
-		clear
-        dirsearchDefaultScan
-		elif [ $poo = '3' ]; then
-		clear
-        dirsearchAdvancedScan
-		elif [ $poo = '4' ]; then
-		clear
-        wascanSimpleScan
+        clear
+        dirsearchMenu
     fi
 }
 wire_audit(){
@@ -120,8 +113,8 @@ osint_tools ()
 {
     echo ' '
     echo '#################  Hack4Squad - OSINT  #################'
-    echo '1 - SIMPLY SCAN A WEBSITE WITH PHOTON'
-    echo '2 - ADVANCED SCAN A WEBSITE WITH PHTON'
+    echo '1 - PHOTON'
+    echo '2 - '
     echo '3 - '
     echo '4 - EXIT'
     echo ' '
@@ -133,6 +126,20 @@ osint_tools ()
         clear
         photonAdvancedScan
     fi
+}
+
+## PHOTON MODULES 
+
+photonMenu ()
+{
+	echo ' '
+    echo '################# Hack4Squad - OSINT > PHOTON '
+    echo '1 - NORMAL SCAN'
+    echo '2 - ADVANCED SCAN'
+    echo '3 - RETURN'
+    echo ' '
+    read -p 'pick:$ ' poo
+
 }
 
 photonSimpleScan ()
@@ -150,6 +157,31 @@ photonAdvancedScan ()
     python photon.py -u $url --wayback --keys --dns -o output
     
 }
+#################################################################
+
+## DIRSEACH MODULES 
+dirsearchMenu ()
+{
+    echo ' '
+    echo '################# Hack4Squad - Webscans > DIRSEARCH '
+    echo '1 - DEFAULT SCAN'
+    echo '2 - ADVANCED SCAN'
+    echo '3 - RETURN'
+    echo ' '
+    read -p 'pick:$ ' poo
+    if [ $poo = '1' ]; then
+        clear
+        dirsearchDefaultScan
+        elif [ $poo = '2' ]; then
+        clear
+        dirsearchAdvancedScan
+        elif [ $poo = '3' ]; then
+        clear
+        web_scans
+    fi
+    
+    
+}
 
 dirsearchDefaultScan ()
 {
@@ -164,30 +196,30 @@ dirsearchAdvancedScan ()
     read url
     echo -n 'Enter your wordlist path '
     read wordlist
-    echo -n 'Enter the number of Threads:'
-    read th 
+    echo -n 'Enter the number of Threads: '
+    read th
     dirsearch -u $url -e *  -w $wordlist -t $th --random-agents
-
+    
 }
 
+###################################################################
 wascanSimpleScan ()
 {
-	echo -n "Enter Your URL: "
+    echo -n "Enter Your URL: "
     read url
-	echo "LIST OF LEVELS: "
-	echo "
+    echo "LIST OF LEVELS: "
+    echo "
 	      0 :     Fingerprint (server,waf,cms,...)
           1 :     Attacks (sql,ldap injection,...)
           2 :     Audit (phpinfo,openredirect,...)
           3 :     Bruteforce (dir,file,backup,...)
           4 :     Disclosure (emails,password,...)
           5 :     Full scan (audit,attacks,brute,...)
-		  "
-	echo -n 'Enter the level: '	  
+    "
+    echo -n 'Enter the level: '
     read lev
-	cd wascan
-	python wascan.py -u $url -s $lev 
-	
+    cd wascan
+    python wascan.py -u $url -s $lev
 }
 
 clear
