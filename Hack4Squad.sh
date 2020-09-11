@@ -109,8 +109,60 @@ os_scans(){
 		mv lynis.log path
 		mv lynis-report.dat lynis-res
 		mv lynis.log lynis-res 
-
 	fi 
+}
+photonAdvancedScan()
+{
+    echo ' ' 
+    echo '################### Hack4Squad - OSINT > Photon > Advanced scan ################### '     
+    echo -e 'Enter Your URL: '
+    read url
+    python3 Photon/photon.py -u $url --wayback --keys --dns -o output
+}
+dirsearchDefaultScan()
+{
+    echo -n "Enter Your URL: "
+    read url
+    dirsearch -u $url -e *
+}
+dirsearchAdvancedScan()
+{
+    echo ' ' 
+    echo '################# Hack4Squad - OSINT > Diresearch > Advanced Scan ################### '
+    echo ' '
+    echo -n "Enter Your URL: "
+    read url
+    echo -n 'Enter your wordlist path '
+    read wordlist
+    echo -n 'Enter the number of Threads:'
+    read th 
+    dirsearch -u $url -e *  -w $wordlist -t $th --random-agents
+
+}
+photonSimpleScan()
+{
+    echo ' '
+    echo '################# Hack4Squad - OSINT > Photon > Simple scan ################## '
+    echo ' '
+    echo -n 'Enter Your URL: '
+    read url
+    python3 Photon/photon.py -u $url
+}
+osint_tools()
+{
+    echo ' '
+    echo '#################  Hack4Squad - OSINT  #################'
+    echo '1 - SIMPLY SCAN A WEBSITE WITH PHOTON'
+    echo '2 - ADVANCED SCAN A WEBSITE WITH PHTON'
+    echo '3 - '
+    echo '4 - EXIT'
+    echo ' '
+    read -p 'pick:$ ' po
+    if [ $po = '1' ]; then
+        photonSimpleScan
+        elif [ $po = '2' ] ; then
+        photonAdvancedScan
+    fi
 }
 clear
 echo   '\e[1;31m-------------------------------------------------------------'
@@ -166,7 +218,7 @@ echo '								'
 echo '\e[1;31m------------------------------------------------------ '                                                  
 web_scans
 elif [ $choice = '3' ]; then
-cleara
+clear
 echo '\e[1;31m-------------------------------------------------------- '  
 echo ' 	   ___  ____                           			   '
 echo '  	 / _ \/ ___|   ___  ___ __ _ _ __  ___			  '
@@ -177,6 +229,7 @@ echo ' '
 echo '\e[1;31m------------------------------------------------------ '                                                  
 os_scans
 elif [ $choice = '4' ]; then 
+clear
 echo '\e[1;31m---------------------------------------------------------------------------------- '  
 echo ' 	          _          _                                 _ _ _   _          	'   
 echo '	__      _(_)_ __ ___| | ___  ___ ___    __ _ _   _  __| (_) |_(_)_ __   __ _  '
@@ -186,9 +239,18 @@ echo ' 	  \_/\_/ |_|_|  \___|_|\___||___/___/  \__,_|\__,_|\__,_|_|\__|_|_| |_|\
 echo ' 	                                                                       |___/  '
 echo ' '
 echo '\e[1;31m---------------------------------------------------------------------------------- '  
-wire_audit
+wire_audita
 elif [ $choice = '5' ]; then
-       osint_toolsض
+clear
+echo '\e[1;31m---------------------------------------------------------------------------------- '  
+echo '	  ___      _       _     _              _      '
+echo ' 	/  _ \ ___(_)_ __ | |_  | |_ ___   ___ | |___  '
+echo ' 	| | | / __| |  _ \| __| | __/ _ \ / _ \| / __| '
+echo ' 	| |_| \__ \ | | | | |_  | || (_) | (_) | \__ \ '
+echo ' 	 \___/|___/_|_| |_|\__|  \__\___/ \___/|_|___/ '
+echo ' ' 
+echo '\e[1;31m---------------------------------------------------------------------------------- ' 
+osint_tools
 elif [ $choice = '6' ]; then 
 	firefox "https://linktr.ee/KMx404"
 fi
