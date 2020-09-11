@@ -137,7 +137,6 @@ dirsearchAdvancedScan()
     echo -n 'Enter the number of Threads:'
     read th 
     dirsearch -u $url -e *  -w $wordlist -t $th --random-agents
-
 }
 photonSimpleScan()
 {
@@ -239,7 +238,7 @@ echo ' 	  \_/\_/ |_|_|  \___|_|\___||___/___/  \__,_|\__,_|\__,_|_|\__|_|_| |_|\
 echo ' 	                                                                       |___/  '
 echo ' '
 echo '\e[1;31m---------------------------------------------------------------------------------- '  
-wire_audita
+wire_audit
 elif [ $choice = '5' ]; then
 clear
 echo '\e[1;31m---------------------------------------------------------------------------------- '  
