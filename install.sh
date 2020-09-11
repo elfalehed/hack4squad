@@ -28,20 +28,19 @@ git clone https://github.com/CISOfy/lynis.git
 echo ''
 ## OSINT TOOLS INSTALLATION 
 ## OSINT Framework resides here cause I don't get it from github 
-
-echo '\e[33m [Photon]'
+echo -e "\e[33m [Photon]"
 git clone https://github.com/s0md3v/Photon
-cd photon
+cd Photon
 pip3 install -r requirements.txt
 cd ..
-echo ''
-echo '\e[33m [Sherlock]'
+echo ' '
+echo -e "\e[33m [Sherlock]"
 git clone https://github.com/sherlock-project/sherlock
 cd sherlock
 pip3 install -r requirements.txt
 cd ..
 echo ' '
-echo '\e[33m [Sherlock]'
+echo -e "\e[33m [Dirsearch]"
 git clone https://github.com/maurosoria/dirsearch
 clear 
 chmod +x Hack4Squad.sh

@@ -72,15 +72,21 @@ web_scans(){
     echo ''
     echo '################# Hack4Squad - Webscans #################'
     echo '1 - SCANT3R '
-    echo '2 - DIRSEARCH '
-    echo '3 -'
-    echo ' '
+    echo '2 - DIRSEARCH SIMPLE SCAN'
+    echo '3 - DIRSEARCH ADVANCED SCAN'
+    echo '4 - WASCAN'
     read -p 'pick$: ' poo
     if [ $poo = '1' ]; then
         clear
         scant3r
         elif [ $poo = '2' ]; then
         dirsearchDefaultScan
+        clear
+		elif [ $poo = '3' ]; then
+        dirsearchAdvancedScan
+        clear
+		elif [ $poo = '4' ]; then
+        wascanSimpleScan
         clear
     fi
 }
@@ -141,7 +147,7 @@ photonAdvancedScan ()
 {
     echo -e 'Enter Your URL: '
     read url
-    photon -u $url --wayback --keys --dns -o output
+    python photon.py -u $url --wayback --keys --dns -o output
     
 }
 
@@ -162,6 +168,26 @@ dirsearchAdvancedScan ()
     read th 
     dirsearch -u $url -e *  -w $wordlist -t $th --random-agents
 
+}
+
+wascanSimpleScan ()
+{
+	echo -n "Enter Your URL: "
+    read url
+	echo "LIST OF LEVELS: "
+	echo "
+	      0 :     Fingerprint (server,waf,cms,...)
+          1 :     Attacks (sql,ldap injection,...)
+          2 :     Audit (phpinfo,openredirect,...)
+          3 :     Bruteforce (dir,file,backup,...)
+          4 :     Disclosure (emails,password,...)
+          5 :     Full scan (audit,attacks,brute,...)
+		  "
+	echo -n 'Enter the level: '	  
+    read lev
+	cd wascan
+	python wascan.py -u $url -s $lev 
+	
 }
 
 clear
