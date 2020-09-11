@@ -6,9 +6,16 @@ clear
 echo -e "\e[33m [installing the needed requirements] "
 echo ' ' 
 echo -e "\e[33m [Airgeddon]"
-echo ''
+echo ' '
 git clone https://github.com/v1s1t0r1sh3r3/airgeddon.git
-echo "" 
+echo ' ' 
+echo -e "\e[33m [WAScan]"
+echo ' '
+git clone https://github.com/m4ll0k/WAScan.git wascan
+cd wascan 
+pip install BeautifulSoup
+cd ..
+echo ' '
 echo -e "\e[33m [Scant3r]"
 echo ''
 git clone https://github.com/knassar702/scant3r.git
@@ -23,6 +30,7 @@ echo ''
 ## OSINT Framework resides here cause I don't get it from github 
 
 echo '\e[33m [Photon]'
+git clone https://github.com/s0md3v/Photon
 cd photon
 pip3 install -r requirements.txt
 cd ..
