@@ -100,8 +100,16 @@ os_scans(){
 	read -p 'pick:$ ' po
 	if [ $po = '1' ]; then
 		clear
+		mkdir lynis-res
 		cd lynis
+		path = pwd 
 		./lynis audit system
+		cd .. 
+		mv lynis-report.dat path 
+		mv lynis.log path
+		mv lynis-report.dat lynis-res
+		mv lynis.log lynis-res 
+
 	fi 
 }
 clear
@@ -132,7 +140,7 @@ echo ' '
 if [ $(id -u) != 0 ]; then
      echo "> You're not root. You need to restart the script with Sudo privilages"
      # elevate script privileges
-fi
+fi 
 echo ' '
 read -p 'Pick$: ' choice 
 if [ $choice = '1' ]; then 
@@ -158,7 +166,7 @@ echo '								'
 echo '\e[1;31m------------------------------------------------------ '                                                  
 web_scans
 elif [ $choice = '3' ]; then
-clear
+cleara
 echo '\e[1;31m-------------------------------------------------------- '  
 echo ' 	   ___  ____                           			   '
 echo '  	 / _ \/ ___|   ___  ___ __ _ _ __  ___			  '
