@@ -215,6 +215,20 @@ dirsearchAdvancedScan ()
 
 ###################################################################
 
+## WASCAN MODULES
+wasCanMenu ()
+{
+	echo ' '
+    echo '################# Hack4Squad - Webscans > WASCAN '
+    echo '1 - DEFAULT SCAN'
+    echo '2 - ADVANCED SCAN'
+    echo '3 - RETURN'
+    echo ' '
+    read -p 'pick:$ ' poo
+    
+
+}
+
 wascanSimpleScan ()
 {
     echo -n "Enter Your URL: "
@@ -231,8 +245,11 @@ wascanSimpleScan ()
     echo -n 'Enter the level: '
     read lev
     cd wascan
-    python wascan.py -u $url -s $lev
+    python wascan.py -u $url -s $lev -r
 }
+
+
+#################################################################
 
 clear
 echo   '\e[1;31m-------------------------------------------------------------'
