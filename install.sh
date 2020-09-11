@@ -19,6 +19,23 @@ echo ''
 echo -e "\e[33m [Lynis]"
 git clone https://github.com/CISOfy/lynis.git
 echo ''
-clear
+## OSINT TOOLS INSTALLATION 
+## OSINT Framework resides here cause I don't get it from github 
+
+echo '\e[33m [Photon]'
+cd photon
+pip3 install -r requirements.txt
+cd ..
+echo ''
+echo '\e[33m [Sherlock]'
+git clone https://github.com/sherlock-project/sherlock
+cd sherlock
+pip3 install -r requirements.txt
+cd ..
+echo ' '
+echo '\e[33m [Sherlock]'
+git clone https://github.com/maurosoria/dirsearch
+clear 
 chmod +x Hack4Squad.sh
 ./Hack4Squad.sh
+                   
