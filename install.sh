@@ -1,9 +1,10 @@
-#! /bin/bash
-#! /bin/bash
+#!/bin/bash
 
 # There should be a command to install each required tool
 
 clear
+mkdir tools
+cd tools
 echo -e "\e[33m [installing the needed requirements] "
 echo ' '
 echo -e "\e[33m [Airgeddon]"
@@ -50,6 +51,7 @@ echo -e "\e[33m [Dirsearch]"
 git clone https://github.com/maurosoria/dirsearch &> /dev/null
 echo '  Installation Completed'
 clear
+cd ..
 chmod +x Hack4Squad.sh
 ./Hack4Squad.sh
 
