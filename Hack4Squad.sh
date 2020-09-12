@@ -67,16 +67,54 @@ scant3r(){
 		scant3r_random_user_agents
 	fi 	
 }
+dirsearchDefaultScan()
+{
+    echo ' '
+    echo '################### Hack4Squad - OSINT > Diresearch > Default Scan ################### '  
+    echo ' '    
+    echo -n "Enter Your URL: "
+    read url
+    sudo python3 dirsearch/dirsearch.py -u $url --clean-view
+ 
+}
+dirsearchAdvancedScan()
+{
+    echo ' ' 
+    echo '################# Hack4Squad - OSINT > Diresearch > Advanced Scan ################### '
+    echo ' '
+    echo -n "Enter Your URL: "
+    read url
+    echo -n 'Enter your wordlist path '
+    read wordlist
+    echo -n 'Enter the number of Threads:'
+    read th 
+    dirsearch -u $url -e *  -w $wordlist -t $th --random-agents
+}
+dirsearchScans(){
+	echo ' '
+	echo '################### Hack4Squad - OSINT > Diresearch ################### '
+        echo ' '	
+	echo '1 - SIMPLE SCAN'
+	echo '2 - ADVANCED SCAN' 
+	read -p 'Pick:$ ' poo
+	if [ $poo = '1' ]; then
+		dirsearchDefaultScan
+	elif [ $poo = '2']; then
+		dirsearchAdvancedScan
+	fi 
+}
 web_scans(){
 	echo '' 
 	echo '################# Hack4Squad - Webscans #################'
 	echo '1 - SCANT3R ' 
-	echo '2 - RETUR ' 
+	echo '2 - DIRSEARCH ' 
 	echo ' '
 	read -p 'pick$: ' poo 
 	if [ $poo = '1' ]; then
 		clear
 		scant3r
+	elif [ $poo = '2']; then
+		dirsearchScans
 	fi 
 }
 wire_audit(){
@@ -118,25 +156,6 @@ photonAdvancedScan()
     echo -e 'Enter Your URL: '
     read url
     python3 Photon/photon.py -u $url --wayback --keys --dns -o output
-}
-dirsearchDefaultScan()
-{
-    echo -n "Enter Your URL: "
-    read url
-    dirsearch -u $url -e *
-}
-dirsearchAdvancedScan()
-{
-    echo ' ' 
-    echo '################# Hack4Squad - OSINT > Diresearch > Advanced Scan ################### '
-    echo ' '
-    echo -n "Enter Your URL: "
-    read url
-    echo -n 'Enter your wordlist path '
-    read wordlist
-    echo -n 'Enter the number of Threads:'
-    read th 
-    dirsearch -u $url -e *  -w $wordlist -t $th --random-agents
 }
 photonSimpleScan()
 {

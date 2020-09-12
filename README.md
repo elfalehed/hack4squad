@@ -8,13 +8,24 @@ Hack4Squad is a collection for hacking tools (Bash and python based) :computer: 
 <br />
 <img src="banner.png" style="float:left; margin-right: 10px;" />
 
- * # Requirements - 
-	1. Nmap Scan 
+# * Requirements - 
+	*  Nmap Scan 
  		1. Address/Host 
 		2. Website 
 			
+	*  Web Security Scanners
+		1. Scant3r 
 
+	*  OS Scanenrs
+		1. Lynis 
 
+	*  Wireless Networks Auditing
+		1. Airgeddon 
+
+	*  OSINT
+		1. Sherlock 
+		2. Photon  
+			
 
 # Installation 
 
