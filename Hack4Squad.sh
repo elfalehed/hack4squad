@@ -19,16 +19,19 @@ nmap_scan1(){
 }
 nmap_scan2(){
 	echo '################# Hack4Squad - NmapBasic Address Scan  #################' 
+	echo ' '
 	read -p 'Your address:$ ' scanaddress
 	nmap -sS $scanaddress 
 }
 nmap_scan3(){
 	echo '################# Hack4Squad - NmapBasic OS Scan #################' 
+	echo ' '
 	nmap -A -O 192.168.0.1
 }
 nmap_scann(){
     echo ' '	
 	echo '#################  Hack4Squad - NmapScans  #################'
+	echo ' '
 	echo '1 - SCAN A WEBSITE' 
 	echo '2 - SCAN AN ADDRESS' 
 	echo '3 - SCAN AN OS'
@@ -54,6 +57,7 @@ scant3r_normal_scan(){
 scant3r(){
 	echo ' '
 	echo '################# Hack4Squad - Webscans > SCANT3R #################'
+	echo ' '
    	echo '1 - NORMAL SCAN'
 	echo '2 - SCAN WITH ADDED MODULE'
 	echo '3 - WITH RANDOM USER-AGENTS'
