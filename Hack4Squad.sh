@@ -110,6 +110,7 @@ dirsearchScans(){
 web_scans(){
 	echo '' 
 	echo '################# Hack4Squad - Webscans #################'
+	echo ' ' 
 	echo '1 - SCANT3R ' 
 	echo '2 - DIRSEARCH ' 
 	echo ' '
@@ -123,7 +124,8 @@ web_scans(){
 }
 wire_audit(){
 	echo ' ' 
-	echo '################# Hack4Squad - Wireless auditing' 
+	echo '################# Hack4Squad - Wireless auditing'
+        echo ' ' 	
 	echo '1 - Airgeddon'  
 	echo ' ' 
 	read -p 'pick:$ ' pa
@@ -156,7 +158,8 @@ os_scans(){
 photonAdvancedScan()
 {
     echo ' ' 
-    echo '################### Hack4Squad - OSINT > Photon > Advanced scan ################### '     
+    echo '################### Hack4Squad - OSINT > Photon > Advanced scan ################### ' 
+    echo ' '	    
     echo -e 'Enter Your URL: '
     read url
     python3 Photon/photon.py -u $url --wayback --keys --dns -o output
@@ -174,6 +177,7 @@ osint_tools()
 {
     echo ' '
     echo '#################  Hack4Squad - OSINT  #################'
+    echo ' ' 
     echo '1 - SIMPLY SCAN A WEBSITE WITH PHOTON'
     echo '2 - ADVANCED SCAN A WEBSITE WITH PHTON'
     echo '3 - '
