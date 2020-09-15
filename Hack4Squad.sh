@@ -113,6 +113,7 @@ web_scans(){
 	echo ' ' 
 	echo '1 - SCANT3R ' 
 	echo '2 - DIRSEARCH ' 
+	echo '3-  Exit '
 	echo ' '
 	read -p 'pick$: ' poo 
 	if [ $poo = '1' ]; then
@@ -127,6 +128,8 @@ wire_audit(){
 	echo '################# Hack4Squad - Wireless auditing'
         echo ' ' 	
 	echo '1 - Airgeddon'  
+	echo '2 - '
+	echo '3 - Exit'
 	echo ' ' 
 	read -p 'pick:$ ' pa
 	if [ $pa = '1' ]; then
@@ -140,6 +143,8 @@ os_scans(){
 	echo ' ' 
 	echo '################# Hack4Squad - OS scans'
 	echo '1 - Lynis'
+	echo '2 ' 
+	echo '3- Exit'
         echo ' '	
 	read -p 'pick:$ ' po
 	if [ $po = '1' ]; then
@@ -153,6 +158,9 @@ os_scans(){
 		mv lynis.log path
 		mv lynis-report.dat lynis-res
 		mv lynis.log lynis-res 
+	
+	elif [ $po = '3' ]; then 
+		exit
 	fi 
 }
 photonAdvancedScan()
