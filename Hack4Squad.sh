@@ -9,7 +9,7 @@
 
 nmap_scan1(){
 	echo ' '
-	echo '#################  Hack4Squad - NmapBasic Website Scan  #################'
+	echo '#################  Hack4Squad - Nmap > Basic Website Scan  #################'
 	echo ' '
 	echo 'Example: '
 	echo 'Your target:$ scanme.nmap.org' 
@@ -18,13 +18,13 @@ nmap_scan1(){
 	nmap -sS -O $scansite
 }
 nmap_scan2(){
-	echo '################# Hack4Squad - NmapBasic Address Scan  #################' 
+	echo '################# Hack4Squad - Nmap > Basic Address Scan  #################' 
 	echo ' '
 	read -p 'Your address:$ ' scanaddress
 	nmap -sS $scanaddress 
 }
 nmap_scan3(){
-	echo '################# Hack4Squad - NmapBasic OS Scan #################' 
+	echo '################# Hack4Squad - Nmap > Basic OS Scan #################' 
 	echo ' '
 	nmap -A -O 192.168.0.1
 }
