@@ -8,7 +8,7 @@ Hack4Squad is a collection for hacking tools (Bash and python based) :computer: 
 <br />
 <img src="banner.png" style="float:left; margin-right: 10px;" />
 
-# * Requirements - 
+# * Requirements 
 	*  Nmap Scan 
  		1. Address/Host 
 		2. Website 
