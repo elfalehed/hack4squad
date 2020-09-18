@@ -16,6 +16,13 @@ nmap_scan1(){
 	echo ' '
 	read -p 'Your target:$ ' scansite
 	nmap -sS -O $scansite
+	echo ' ' 
+	echo ' ' 
+	read -p '99 - Return:$ ' ann
+	if [ $ann = '99' ]; then
+	       chmod +x Hack4Squad.sh
+       	       ./Hack4Squad.sh	       
+	fi
 }
 nmap_scan2(){
 	echo '################# Hack4Squad - Nmap > Basic Address Scan  #################' 
@@ -36,6 +43,7 @@ nmap_scann(){
 	echo '2 - SCAN AN ADDRESS' 
 	echo '3 - SCAN AN OS'
 	echo '4 - EXIT'
+	echo '99 - RETURN '
 	echo ' '
 	read -p 'Pick$: ' po 
 	if [ $po = '1' ]; then
@@ -44,8 +52,11 @@ nmap_scann(){
 	       nmap_scan2 
 	elif [ $po = '3' ]; then
 		nmap_scan3 
-	elif [ $po = '4']; then
+	elif [ $po = '4' ]; then
 		exit 
+	elif [ $po = '99' ]; then
+		chmod +x Hack4Squad.sh
+		./Hack4Squad.sh
 	fi 
 }
 scant3r_normal_scan(){
@@ -53,6 +64,13 @@ scant3r_normal_scan(){
 	echo '################# Hack4Squad - Webscans > SCANT3R > NORMAL SCAN' 
 	echo ' '  
 	python3 SCANT3R_V2.py
+	echo ' ' 
+	echo ' '
+	read -p '99 - Return' ann
+	if [ $ann = '99' ];then
+		chmod +x Hack4Squad.sh
+		./Hack4Squad.sh
+	fi 
 }  
 scant3r(){
 	echo ' '
@@ -79,6 +97,8 @@ dirsearchDefaultScan()
     echo -n "Enter Your URL: "
     read url
     sudo python3 dirsearch/dirsearch.py -u $url --clean-view
+    chmod +x Hack4Squad.sh
+    ./Hack4Squad.sh
  
 }
 dirsearchAdvancedScan()
@@ -119,8 +139,11 @@ web_scans(){
 	if [ $poo = '1' ]; then
 		clear
 		scant3r
-	elif [ $poo = '2']; then
+	elif [ $poo = '2' ]; then
 		dirsearchScans
+	elif [ $poo = '3' ]; then
+		chmod +x Hack4Squad.sh
+		./Hack4Squad.sh
 	fi 
 }
 wire_audit(){
@@ -129,7 +152,7 @@ wire_audit(){
         echo ' ' 	
 	echo '1 - Airgeddon'  
 	echo '2 - '
-	echo '3 - Exit'
+	echo '3 - Return'
 	echo ' ' 
 	read -p 'pick:$ ' pa
 	if [ $pa = '1' ]; then
@@ -137,6 +160,10 @@ wire_audit(){
 		cd airgeddon
 		chmod +x airgeddon.sh
 		./airgeddon.sh
+	elif [ $po = '3' ]; then
+		clear 
+		chmod Hack4Squad.sh
+		./Hack4Squad
 	fi
 }
 os_scans(){
@@ -145,6 +172,7 @@ os_scans(){
 	echo '1 - Lynis'
 	echo '2 ' 
 	echo '3- Exit'
+	echo '99 - RETURN'
         echo ' '	
 	read -p 'pick:$ ' po
 	if [ $po = '1' ]; then
@@ -161,6 +189,9 @@ os_scans(){
 	
 	elif [ $po = '3' ]; then 
 		exit
+	elif [ $po = '99' ]; then
+		chmod +x Hack4Squad.sh
+		./Hack4Squad.sh
 	fi 
 }
 photonAdvancedScan()
@@ -188,14 +219,19 @@ osint_tools()
     echo ' ' 
     echo '1 - SIMPLY SCAN A WEBSITE WITH PHOTON'
     echo '2 - ADVANCED SCAN A WEBSITE WITH PHTON'
-    echo '3 - '
+    echo '3 -  '
     echo '4 - EXIT'
+    echo '99 - RETURN'
     echo ' '
     read -p 'pick:$ ' po
     if [ $po = '1' ]; then
         photonSimpleScan
-        elif [ $po = '2' ] ; then
+    elif [ $po = '2' ] ; then
         photonAdvancedScan
+elif [ $po = '99' ]; then
+	chmod Hack4Squad.sh
+	./Hack4Squad.sh
+
     fi
 }
 clear
@@ -224,7 +260,7 @@ echo ' '
 echo '         [~] Use this script only on your Network '
 echo ' '
 if [ $(id -u) != 0 ]; then
-     echo "> You're not root. You need to restart the script with Sudo privilages"
+     echo '>\e[1;31m  You are not root. You need to restart the script with Sudo privilages'
      # elevate script privileges
 fi 
 echo ' '
@@ -287,4 +323,10 @@ echo '\e[1;31m------------------------------------------------------------------
 osint_tools
 elif [ $choice = '6' ]; then 
 	firefox "https://linktr.ee/KMx404"
+else
+	clear
+	echo ' ' 
+	echo ' '
+	chmod +x Hack4Squad.sh
+	./Hack4Squad.sh
 fi
