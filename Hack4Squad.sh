@@ -79,7 +79,8 @@ scant3r(){
    	echo '1 - NORMAL SCAN'
 	echo '2 - SCAN WITH ADDED MODULE'
 	echo '3 - WITH RANDOM USER-AGENTS'
-	echo ' ' 
+	echo '99 - RETURN '
+        echo ' ' 	
 	read -p 'pick:$ ' poo
 	if [ $poo = '1' ]; then
 		scant3r_normal_scan
@@ -87,6 +88,9 @@ scant3r(){
 		scant3r_added_module
 	elif [ $poo = '3' ]; then
 		scant3r_random_user_agents
+	elif [ $poo = '99' ]; then
+		chmod +x Hack4Squad.sh
+		./Hack4Squad.sh
 	fi 	
 }
 dirsearchDefaultScan()
