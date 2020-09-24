@@ -1,59 +1,68 @@
-# :skull: Hack4Squad [![HitCount](http://hits.dwyl.com/{KMx404}/{Hack4Squad}.svg)](http://hits.dwyl.com/{KMx404}/{Hack4Squad})  [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)  [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/nmap/nmap.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/nmap/nmap/context:python)
+# :skull: Hack4Squad [![HitCount](http://hits.dwyl.com/{KMx404}/{Hack4Squad}.svg)](http://hits.dwyl.com/{KMx404}/{Hack4Squad}) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues) [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/nmap/nmap.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/nmap/nmap/context:python)
 
+A bash hacking utility driven by a Python script.
 
+---
 
-A bash hacking utility driven by python script 
-<hr> <br />
-Hack4Squad is a collection for hacking tools (Bash and python based) :computer: <br />
-<br />
+Hack4Squad is a collection for Hacking Tools (Bash and Python based) :computer: <br />
+
 <img src="banner.png" style="float:left; margin-right: 10px;" />
 
-# * Requirements 
-	*  Nmap Scan 
- 		1. Address/Host 
-		2. Website 
-			
-	*  Web Security Scanners
-		1. Scant3r 
+---
 
-	*  OS Scanenrs
-		1. Lynis 
+# Tools
 
-	*  Wireless Networks Auditing
-		1. Airgeddon 
+1. Reconnaissance
+   - Dirsearch
+   - Nmap
+   - Lynis
+   - Wascan
+   - Airgeddon
+   - Scant3r
+2. Exploitation
+   - Airgeddon
+3. OSINT
+   - Sherlock
+   - Photon
 
-	*  OSINT
-		1. Sherlock 
-		2. Photon  
-			
+And more tools to be added soon.
 
-# Installation 
+# 1. Requirements
+
+Please make sure these packages below are installed;
+
+- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- [Python 3](https://docs.python-guide.org/starting/install3/linux/)
+- [Pip](https://pip.pypa.io/en/stable/installing/)
+
+# 2. Installation
+
+- Note that this script must be run as root.
 
 ```Shell
-
-1. chmod +x install.sh
-2. ./install.sh
-
+$ chmod +x install.sh
+$ sudo ./install.sh
 ```
 
-# Running the script 
+# 3. Execution
 
 ```Shell
-1. chmod +x Hack4Squad.sh
-2. ./Hack4Squad.sh
-
+$ chmod +x Hack4Squad.sh
+$ ./Hack4Squad.sh
 ```
 
-## Status: 
-<b><i>In progress...</i></b>
+---
 
+# Status:
 
-## 2Do: 
-* Complete the bash file (parts) 
-* Check NMAP scan 
-* Audit wireless networks 
-* Airgeddon features as a side tool 
-* Driven python script only to be compatible 
+![70%](https://progress-bar.dev/70) **_In progress..._**
+
+## 2DO:
+
+- Complete the bash file (parts).
+- Check NMAP scan.
+- Audit wireless networks.
+- Airgeddon features as a side tool.
+- Driven python script only to be compatible.
 
 <br />
-
