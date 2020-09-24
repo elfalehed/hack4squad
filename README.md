@@ -29,11 +29,11 @@ And more tools to be added soon.
 
 # 1. Requirements
 
-- Please make sure these packages below are installed;
+Please make sure these packages below are installed;
 
-[- Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-[- Python 3](https://docs.python-guide.org/starting/install3/linux/)
-[- Pip](https://pip.pypa.io/en/stable/installing/)
+- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- [Python 3](https://docs.python-guide.org/starting/install3/linux/)
+- [Pip](https://pip.pypa.io/en/stable/installing/)
 
 # 2. Installation
 
