@@ -1,3 +1,5 @@
+# Hack4Squad - SCANT3R
+
 import sys, subprocess 
 import os 
 
