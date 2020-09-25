@@ -29,6 +29,13 @@ nmap_scan2() {
 	echo ' '
 	read -p 'Your address:$ ' scanaddress
 	nmap -sS $scanaddress
+	echo ' ' 
+	echo ' '
+	read -p '99 - Return:$ ' noo
+	if [ $noo = '99' ]; then
+		chmod +x Hack4Squad.sh
+		./Hack4Squad.sh
+	fi
 }
 nmap_scan3() {
 	echo '################# Hack4Squad - Nmap > Basic OS Scan #################'
@@ -100,9 +107,7 @@ dirsearchDefaultScan() {
 	echo -n "Enter Your URL: "
 	read url
 	sudo python3 dirsearch/dirsearch.py -u $url --clean-view
-	chmod +x Hack4Squad.sh
-	./Hack4Squad.sh
-
+	
 }
 dirsearchAdvancedScan() {
 	echo ' '
@@ -135,7 +140,8 @@ web_scans() {
 	echo ' '
 	echo '1 - SCANT3R '
 	echo '2 - DIRSEARCH '
-	echo '3-  Exit '
+	echo ' ' 
+	echo '99 - Return  '
 	echo ' '
 	read -p 'pick$: ' poo
 	if [ $poo = '1' ]; then
@@ -203,6 +209,13 @@ photonAdvancedScan() {
 	echo -e 'Enter Your URL: '
 	read url
 	python3 Photon/photon.py -u $url --wayback --keys --dns -o output
+	echo ' ' 
+	read -p  '99 - Return:$ ' poo
+	if [ $poo = '99' ]; then
+		clear
+		chmod +x Hack4Squad.sh
+		./Hack4Squad.sh
+	fi
 }
 photonSimpleScan() {
 	echo ' '
@@ -211,6 +224,13 @@ photonSimpleScan() {
 	echo -n 'Enter Your URL: '
 	read url
 	python3 Photon/photon.py -u $url
+	echo ' '
+	read -p  '99 - Return:$ ' poo
+        if [ $poo = '99']; then
+		clear
+		chmod +x Hack4Squad.sh
+		./Hack4Squad.sh
+	fi 	
 }
 osint_tools() {
 	echo ' '
@@ -255,6 +275,7 @@ echo '\e[1;31m------------------------------------------------------------- ' 
 echo '\e[1;36m [$] H3LL0,' $USER
 echo ' '
 echo '	 [!] Greetingz. This script is a gift for my fellow Hackers out there. Happy Hacking! '
+echo ' 	 [!] Note: Make sure you installed all of the Requirements  	'
 echo ' '
 echo '         [~] Use this script only on your Network '
 echo ' '

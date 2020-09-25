@@ -1,1 +1,3 @@
-http://scanme.namp.org
+http://scanme.nmap.org
+http://scanme.nmap.org/
+http://scanme.nmap.org//
