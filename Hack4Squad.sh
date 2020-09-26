@@ -149,7 +149,7 @@ web_scans() {
 		scant3r
 	elif [ $poo = '2' ]; then
 		dirsearchScans
-	elif [ $poo = '3' ]; then
+	elif [ $poo = '99' ]; then
 		chmod +x Hack4Squad.sh
 		./Hack4Squad.sh
 	fi
