@@ -23,6 +23,7 @@ nmap_scan1() {
 		chmod +x Hack4Squad.sh
 		./Hack4Squad.sh
 	fi
+
 }
 nmap_scan2() {
 	echo '################# Hack4Squad - Nmap > Basic Address Scan  #################'
