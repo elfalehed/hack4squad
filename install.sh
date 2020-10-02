@@ -58,7 +58,12 @@ else
         echo -e "\e[33m [Dirsearch]"
         git clone https://github.com/maurosoria/dirsearch &>/dev/null
         echo '  Installation Completed'
-        clear
+	echo ' ' 
+	echo -e "\e[33m [PasteJacker]"
+	git clone https://github.com/D4Vinci/PasteJacker.git
+	sudo python3 -m pip install ./PasteJacker
+	sudo pastejacker
+	clear
         chmod +x Hack4Squad.sh
         ./Hack4Squad.sh
     fi

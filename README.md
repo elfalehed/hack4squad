@@ -21,6 +21,7 @@ Hack4Squad is a collection for Hacking Tools (Bash and Python based) :computer: 
    - Scant3r
 2. Exploitation
    - Airgeddon
+   - PasteJacker	
 3. OSINT
    - Sherlock
    - Photon
