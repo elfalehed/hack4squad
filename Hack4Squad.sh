@@ -137,10 +137,11 @@ dirsearchScans() {
 }
 web_scans() {
 	echo ''
-	echo '################# Hack4Squad - Webscans #################'
+	echo '################# Hack4Squad - WebHacking Tools - Scans #################'
 	echo ' '
 	echo '1 - SCANT3R '
 	echo '2 - DIRSEARCH '
+	echo '3 - PASTEJACKER ' 
 	echo ' ' 
 	echo '99 - Return  '
 	echo ' '
@@ -150,6 +151,9 @@ web_scans() {
 		scant3r
 	elif [ $poo = '2' ]; then
 		dirsearchScans
+	elif [ $poo = '3' ]; then
+		cd PasteJacker
+		sude pastejacker
 	elif [ $poo = '99' ]; then
 		chmod +x Hack4Squad.sh
 		./Hack4Squad.sh
@@ -267,7 +271,7 @@ echo ' \e[1;33m                   HACKING UTILITY             \e[0m     '
 echo '\e[1;31m                            Author: @KMx404            \e[0m'
 echo '\e[1;31m-------------------------------------------------------------\e[0m'
 echo '       1 - \e[1;34m   NMAP SCAN           \e[0m                   '
-echo '       2 - \e[1;34m   WEB SECURITY SCANNERS \e[0m                                                  '
+echo '       2 - \e[1;34m   WEB SECURITY HACK TOOLS - SCANNERS \e[0m                                                  '
 echo '       3 - \e[1;34m   OS SCANNERS   \e[0m                                               '
 echo '       4 - \e[1;34m   WIRELESS NETWORKS AUDITING   \e[0m                                  '
 echo '       5 - \e[1;34m   OSINT TOOLS 	\e[0m					'
