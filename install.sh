@@ -11,7 +11,8 @@ else
         exit 1
     else
         # There should be a command to install each required tool
-        clear
+        # KMx404 - Hack4Squad
+	clear
         echo -e "\e[33m [installing the needed requirements] "
         echo ' '
         echo -e "\e[33m [Airgeddon]"
