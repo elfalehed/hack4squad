@@ -247,6 +247,7 @@ osint_tools() {
 	echo '4 - EXIT'
 	echo '99 - RETURN'
 	echo ' '
+	# NEW
 	read -p 'pick:$ ' po
 	if [ $po = '1' ]; then
 		photonSimpleScan
