@@ -2,7 +2,7 @@
 
 # Name: Hack4Squad
 # Clone the repository and add your features in the develop branch
-# Author: Mohamed E.Faleh // @KMx404 >> All contributers are mentioned in the README file
+# Author: Mohamed E.Faleh // @elfalehdev >> All contributers are mentioned in the README file
 # Version: V0.1
 # BashV: V4.1+
 # Happy Hacking
