@@ -1,4 +1,4 @@
-# :skull: Hack4Squad  [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?steyle=flat)](https://github.com/dwyl/esta/issues) [!linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+# :skull: Hack4Squad  [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?steyle=flat)](https://github.com/dwyl/esta/issues) [](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
 A bash hacking utility 
 
@@ -7,7 +7,7 @@ A bash hacking utility
 Hack4Squad is a collection for Hacking Tools (Bash and Python based) :computer: <br />
 
 
-<img src="banner.png"/>
+<img src="./website/public/banner.png"/>
 
 ---
 
