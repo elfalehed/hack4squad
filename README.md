@@ -1,6 +1,6 @@
-# :skull: Hack4Squad [![HitCount](http://hits.dwyl.com/{elfalehdev}/{Hack4Squad}.svg)](http://hits.dwyl.com/{elfalehdev}/{Hack4Squad}) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues) [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/nmap/nmap.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/nmap/nmap/context:python)
+# :skull: Hack4Squad  [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?steyle=flat)](https://github.com/dwyl/esta/issues) [!linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
-A bash hacking utility driven by a Python script.
+A bash hacking utility 
 
 ---
 
@@ -61,10 +61,7 @@ $ ./Hack4Squad.sh
 
 ## 2DO:
 
-- Complete the bash file (parts).
-- Check NMAP scan.
-- Audit wireless networks.
-- Airgeddon features as a side tool.
-- Driven python script only to be compatible.
+- Fix the installation 
+- Fix the prompts configuration
 
 <br />
